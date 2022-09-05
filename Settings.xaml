@@ -1,0 +1,23 @@
+﻿<Window x:Class="TestZadanieChart.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestZadanieChart"
+        mc:Ignorable="d"
+        Title="Настройки" Height="450" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="textCountX" Content="Количество точек на оси X:" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="countX" Background="LightGray" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="onlyNumber" MaxLines="1" MaxLength="4"/>
+
+        <Label x:Name="textCountY" Content="Диапазон точек на оси Y:" HorizontalAlignment="Center" Margin="0,119,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="countY" Background="LightGray" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" FontSize="20" PreviewTextInput="onlyNumber" MaxLines="1" MaxLength="4"/>
+
+        <Label x:Name="textCountT" Content="Количество трендов:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Margin="0,208,0,0"/>
+        <ComboBox x:Name="countT" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" FontSize="20">
+            <TextBlock TextAlignment="Center">1</TextBlock>
+            <TextBlock TextAlignment="Center">2</TextBlock>
+        </ComboBox>
+        <Button x:Name="run" Content="Запуск" HorizontalAlignment="Center"   FontSize="20" Height="40" Width="100" Margin="0,250,0,0" Click="run_Click"/>
+    </Grid>
+</Window>
